@@ -5,8 +5,27 @@
 | 0001 | 2026-10-28 | Setup | Create folder structure + context engineering files | Done |
 | 0002 | 2026-10-28 | System Setup | Git init, editor configs, code directory structure, dev setup guide | Done |
 | 0003 | 2026-10-28 | Container Hosting | Docker container local setup, tech stack decision (Next.js/Tailwind/Static MDX) | Done |
+| 0004 | 2026-10-28 | GitHub Connection | gh auth device flow, repo created, all commits pushed to origin | Done |
 
 ---
+
+## Session 0004 — 2026-10-28
+
+**Goal:** Connect GitHub, establish remote persistency, verify skills.
+
+**Completed:**
+- `gh auth login` via device flow — account `kmishra1204`, scopes: gist/read:org/repo/workflow
+- `git config` — user.name "Karuna", user.email "karunam1204@", defaultBranch main
+- `gh repo create app-orcasagent-com --public --source . --push` — repo created at https://github.com/kmishra1204/app-orcasagent-com
+- All 4 commits pushed to `origin/master`
+- `git remote -v` — origin set to `https://github.com/kmishra1204/app-orcasagent-com.git`
+- Working tree clean, branch up to date with origin/master
+
+**Blocked:** None
+
+**Next Session First Action:** Initialize Next.js app in `07_CODE/frontend/` (CP-009 MVP frontend build), or begin CP-006 database schema design.
+
+**Notes:** Git repo has 4 commits. Container config ready. GitHub remote persistency established.
 
 ## Session 0003 — 2026-10-28
 
