@@ -1,0 +1,209 @@
+{
+  "release": "agent-mesh-1.0",
+  "version": "1.0.5",
+  "totals": {
+    "kits": 23,
+    "agents": 1200,
+    "intents": 3546
+  },
+  "kits": [
+    {
+      "slug": "servicenow",
+      "version": "1.1.2",
+      "agents": 68,
+      "intents": 187,
+      "platform": "ServiceNow",
+      "owner": "ServiceNow",
+      "validation": "PASS"
+    },
+    {
+      "slug": "salesforce",
+      "version": "1.1.3",
+      "agents": 66,
+      "intents": 189,
+      "platform": "Salesforce",
+      "owner": "Salesforce",
+      "validation": "PASS"
+    },
+    {
+      "slug": "logicmonitor",
+      "version": "1.1.2",
+      "agents": 52,
+      "intents": 140,
+      "platform": "LogicMonitor",
+      "owner": "LogicMonitor",
+      "validation": "PASS"
+    },
+    {
+      "slug": "vercel",
+      "version": "1.4.1",
+      "agents": 46,
+      "intents": 164,
+      "platform": "Vercel",
+      "owner": "Vercel",
+      "validation": "PASS"
+    },
+    {
+      "slug": "runpod",
+      "version": "1.4.1",
+      "agents": 48,
+      "intents": 162,
+      "platform": "RunPod",
+      "owner": "RunPod",
+      "validation": "PASS"
+    },
+    {
+      "slug": "zen",
+      "version": "1.1.2",
+      "agents": 52,
+      "intents": 140,
+      "platform": "Actian Zen",
+      "owner": "Actian",
+      "validation": "PASS"
+    },
+    {
+      "slug": "informix",
+      "version": "1.1.2",
+      "agents": 53,
+      "intents": 140,
+      "platform": "HCL Informix",
+      "owner": "HCLSoftware · Actian",
+      "validation": "PASS"
+    },
+    {
+      "slug": "appscan",
+      "version": "1.2.1",
+      "agents": 50,
+      "intents": 161,
+      "platform": "HCL AppScan",
+      "owner": "HCLSoftware",
+      "validation": "PASS"
+    },
+    {
+      "slug": "bigfix",
+      "version": "1.4.1",
+      "agents": 50,
+      "intents": 164,
+      "platform": "HCL BigFix",
+      "owner": "HCLSoftware",
+      "validation": "PASS"
+    },
+    {
+      "slug": "cdp",
+      "version": "1.1.2",
+      "agents": 52,
+      "intents": 142,
+      "platform": "HCL CDP",
+      "owner": "HCLSoftware",
+      "validation": "PASS"
+    },
+    {
+      "slug": "commerce",
+      "version": "1.1.1",
+      "agents": 50,
+      "intents": 161,
+      "platform": "HCL Commerce",
+      "owner": "HCLSoftware",
+      "validation": "PASS"
+    },
+    {
+      "slug": "compass",
+      "version": "1.1.2",
+      "agents": 53,
+      "intents": 135,
+      "platform": "HCL Compass",
+      "owner": "HCLSoftware",
+      "validation": "PASS"
+    },
+    {
+      "slug": "connections",
+      "version": "1.1.2",
+      "agents": 52,
+      "intents": 142,
+      "platform": "HCL Connections",
+      "owner": "HCLSoftware",
+      "validation": "PASS"
+    },
+    {
+      "slug": "dx",
+      "version": "1.1.1",
+      "agents": 50,
+      "intents": 154,
+      "platform": "HCL DX",
+      "owner": "HCLSoftware",
+      "validation": "PASS"
+    },
+    {
+      "slug": "hwa",
+      "version": "1.2.1",
+      "agents": 47,
+      "intents": 163,
+      "platform": "HCL DevOps Velocity",
+      "owner": "HCLSoftware",
+      "validation": "PASS"
+    },
+    {
+      "slug": "domino",
+      "version": "1.1.1",
+      "agents": 49,
+      "intents": 160,
+      "platform": "HCL Domino",
+      "owner": "HCLSoftware",
+      "validation": "PASS"
+    },
+    {
+      "slug": "leap",
+      "version": "1.1.2",
+      "agents": 52,
+      "intents": 138,
+      "platform": "HCL Leap",
+      "owner": "HCLSoftware",
+      "validation": "PASS"
+    },
+    {
+      "slug": "sametime",
+      "version": "1.1.2",
+      "agents": 52,
+      "intents": 144,
+      "platform": "HCL Sametime",
+      "owner": "HCLSoftware",
+      "validation": "PASS"
+    },
+    {
+      "slug": "unica",
+      "version": "1.2.1",
+      "agents": 51,
+      "intents": 159,
+      "platform": "HCL Unica",
+      "owner": "HCLSoftware",
+      "validation": "PASS"
+    },
+    {
+      "slug": "uno",
+      "version": "1.8.3",
+      "agents": 52,
+      "intents": 173,
+      "platform": "HCL Universal Orchestrator",
+      "owner": "HCLSoftware",
+      "validation": "PASS"
+    },
+    {
+      "slug": "voltmx",
+      "version": "1.1.1",
+      "agents": 51,
+      "intents": 144,
+      "platform": "HCL Volt MX",
+      "owner": "HCLSoftware",
+      "validation": "PASS"
+    },
+    {
+      "slug": "icontrol",
+      "version": "1.1.2",
+      "agents": 52,
+      "intents": 141,
+      "platform": "HCL iControl",
+      "owner": "HCLSoftware",
+      "validation": "PASS"
+    }
+  ]
+}

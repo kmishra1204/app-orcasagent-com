@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+    --font-body: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+
+    --bg-light: #f2f4f7;
+    --bg-dark: #0b1420;
+    --surface-light: #ffffff;
+    --surface-dark: #121e2d;
+    --ink-light: #0f1d2e;
+    --ink-dark: #e8edf4;
+    --muted-light: #56657a;
+    --muted-dark: #9aa8bb;
+    --line-light: #d9dfe7;
+    --line-dark: #24344a;
+    --brass-light: #9a6410;
+    --brass-dark: #e2a64a;
+    --brass-soft-light: #f5e9d4;
+    --brass-soft-dark: #2c2414;
+    --teal-light: #0d7a72;
+    --teal-dark: #3cc4b8;
+    --rose-light: #b4235a;
+    --rose-dark: #f06c9b;
+  }
+
+  [data-theme="dark"] {
+    --bg: var(--bg-dark);
+    --surface: var(--surface-dark);
+    --ink: var(--ink-dark);
+    --muted: var(--muted-dark);
+    --line: var(--line-dark);
+    --brass: var(--brass-dark);
+    --brass-soft: var(--brass-soft-dark);
+    --teal: var(--teal-dark);
+    --rose: var(--rose-dark);
+  }
+
+  [data-theme="light"], :root:not([data-theme="dark"]) {
+    --bg: var(--bg-light);
+    --surface: var(--surface-light);
+    --ink: var(--ink-light);
+    --muted: var(--muted-light);
+    --line: var(--line-light);
+    --brass: var(--brass-light);
+    --brass-soft: var(--brass-soft-light);
+    --teal: var(--teal-light);
+    --rose: var(--rose-light);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  .text-ink {
+    color: var(--ink);
+  }
+
+  .bg-paper {
+    background-color: var(--bg);
+  }
+
+  .text-brass {
+    color: var(--brass);
+  }
+
+  .text-teal {
+    color: var(--teal);
+  }
+
+  .text-rose {
+    color: var(--rose);
+  }
+
+  .border-line {
+    border-color: var(--line);
+  }
+
+  .bg-surface {
+    background-color: var(--surface);
+  }
+
+  .text-muted {
+    color: var(--muted);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
