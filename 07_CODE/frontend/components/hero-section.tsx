@@ -1,9 +1,11 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, useMotionValue, useSpring, useReducedMotion } from 'framer-motion'
 import Link from 'next/link'
 
 export function HeroSection() {
+  const prefersReducedMotion = useReducedMotion() ?? false
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -38,9 +40,33 @@ export function HeroSection() {
       className="relative pt-20 pb-24 overflow-hidden"
       aria-labelledby="hero-heading"
     >
-      {/* Background glow for brass accent */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brass-light/10 rounded-full blur-[120px] -z-10 pointer-events-none" />
-      <div className="absolute bottom-0 right-1/2 -translate-x-1/2 w-[500px] h-[250px] bg-teal-light/10 rounded-full blur-[100px] -z-10 pointer-events-none" />
+      {/* Subtle mesh grid pattern — 3% opacity */}
+      <div
+        className="absolute inset-0 -z-20 pointer-events-none opacity-[0.03]"
+        style={{
+          backgroundImage: `
+            linear-gradient(var(--line) 1px, transparent 1px),
+            linear-gradient(90deg, var(--line) 1px, transparent 1px)
+          `,
+          backgroundSize: '60px 60px',
+        }}
+      />
+
+      {/* Background brass orb — slow pulsing scale (6s loop) */}
+      <motion.div
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brass-light/10 rounded-full blur-[120px] -z-10 pointer-events-none"
+        animate={prefersReducedMotion ? undefined : { scale: [1, 1.05, 1] }}
+        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+        style={{ transformOrigin: 'center' }}
+      />
+
+      {/* Background teal orb — slow pulsing scale (6s loop, offset by 3s) */}
+      <motion.div
+        className="absolute bottom-0 right-1/2 -translate-x-1/2 w-[500px] h-[250px] bg-teal-light/10 rounded-full blur-[100px] -z-10 pointer-events-none"
+        animate={prefersReducedMotion ? undefined : { scale: [1, 1.05, 1] }}
+        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
+        style={{ transformOrigin: 'center' }}
+      />
 
       <motion.div
         variants={containerVariants}
@@ -109,26 +135,37 @@ export function HeroSection() {
             </Link>
           </motion.div>
 
-          {/* Proof strip preview (small teaser below hero) */}
+          {/* Proof strip preview — breathing teal dots (3s loop) */}
           <motion.div
             variants={itemVariants}
             className="mt-12 flex flex-wrap justify-between items-center gap-4 border-t border-line pt-8 text-xs font-mono text-muted"
           >
-            <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-teal animate-pulse" />
-              23/23 kits validated
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-teal animate-pulse" />
-              1,200 governed agents
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-teal animate-pulse" />
-              Shadow mode by default
-            </span>
+            <ProofStripItem text="23/23 kits validated" prefersReducedMotion={prefersReducedMotion} />
+            <ProofStripItem text="1,200 governed agents" prefersReducedMotion={prefersReducedMotion} />
+            <ProofStripItem text="Shadow mode by default" prefersReducedMotion={prefersReducedMotion} />
           </motion.div>
         </div>
       </motion.div>
     </section>
+  )
+}
+
+function ProofStripItem({
+  text,
+  prefersReducedMotion,
+}: {
+  text: string
+  prefersReducedMotion: boolean
+}) {
+  return (
+    <span className="flex items-center gap-2">
+      <motion.span
+        className="w-2 h-2 rounded-full bg-teal"
+        animate={prefersReducedMotion ? {} : { opacity: [0.4, 1, 0.4] }}
+        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+        style={{ transformOrigin: 'center' }}
+      />
+      {text}
+    </span>
   )
 }
