@@ -19,14 +19,15 @@
 | CP-009 | MVP frontend build | Code | Pending | CP-005, CP-007 | `07_CODE/frontend/` | Deployable landing page |
 | CP-010 | Launch readiness | All | Pending | CP-008, CP-009 | Launch checklist | Site live, analytics, SEO meta tags |
 
-**Completed this session (0004):**
-- GitHub connected: `gh auth login` via device flow (account kmishra1204)
-- Repo created: https://github.com/kmishra1204/app-orcasagent-com
-- All 4 commits pushed to origin/master
-- Remote persistency established
+**Completed this session (0005):**
+- GTM research: agent-mesh-release cloned, all GTM kit files read
+- Page plan: `02_PLANNING/page-plan.md` (home + 2 legal pages, 8 anchored sections)
+- Component inventory: `02_PLANNING/component-inventory.md` (16 components)
+- Data pipeline spec: `02_PLANNING/data-pipeline.md` (build-time from release-manifest.json)
+- Source material ingested into project folders
 
 **New Checkpoint Added:**
-| CP-011 | GitHub remote persistency | Infrastructure | Done | CP-005 | https://github.com/kmishra1204/app-orcasagent-com | Repo created, all commits pushed, working tree clean |
+| CP-012 | GTM research + page plan | Research/Planning | Done | CP-001, CP-005 | page-plan.md, component-inventory.md, data-pipeline.md | All copy, figures, brand tokens, hard rules documented |
 
 ---
 
@@ -36,6 +37,7 @@
 | CP-001 | Project skeleton + context files | 2026-10-28 |
 | CP-005 | Tech stack selection | 2026-10-28 |
 | CP-011 | GitHub remote persistency | 2026-10-28 |
+| CP-012 | GTM research + page plan | 2026-10-28 |
 
 ---
 
