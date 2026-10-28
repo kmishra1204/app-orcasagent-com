@@ -10,14 +10,14 @@ Select framework, CMS, hosting, styling, and deployment pipeline.
 | Framework | Next.js | Astro | Remix | | |
 | CMS | Sanity | Contentful | Static MDX | | |
 | Styling | Tailwind CSS | CSS Modules | Styled Components | | |
-| Hosting | Vercel | Netlify | AWS Amplify | | |
+| Hosting | Docker container (local) | Vercel | AWS Amplify | Docker container (local) | Local container per requirement |
 | Analytics | Plausible | Google Analytics | PostHog | | |
 | Forms | Resend | Formspree | Web3Forms | | |
 | CI/CD | GitHub Actions | Vercel Auto | CircleCI | | |
 
-## Selected Stack (pending decision)
-- **Framework:** 
-- **CMS:** 
-- **Styling:** 
-- **Hosting:** 
-- **Deploy:** 
+## Selected Stack (CP-005 decided)
+- **Framework:** Next.js
+- **CMS:** Static MDX
+- **Styling:** Tailwind CSS
+- **Hosting:** Docker container (local)
+- **Deploy:** `docker compose up`

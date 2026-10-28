@@ -40,8 +40,46 @@ npx eslint .
 ## Pre-Commit Hooks (recommended)
 Install `husky` + `lint-staged` to run Prettier + ESLint on commit.
 
-## Deployment Targets (pending — CP-005)
-- Vercel / Netlify / AWS Amplify / Self-hosted
+## Container Local Development (Hosting Decision)
+This project is deployed as a **Docker container locally** per the tech stack decision.
+
+### Quick Start
+```bash
+# 1. Copy environment example
+cp .env.example .env.local
+# Edit .env.local with your values
+
+# 2. Build and run
+make build      # or: docker compose build
+make up         # or: docker compose up -d
+
+# 3. Verify
+open http://localhost:3000
+
+# 4. Manage
+make logs       # follow logs
+make ps         # list containers
+make down       # stop containers
+make shell      # exec into running container
+```
+
+### Makefile Targets
+| Target | Command | Description |
+|--------|---------|-------------|
+| `make build` | `docker compose build` | Build the Docker image |
+| `make up` | `docker compose up -d` | Start container in detached mode |
+| `make down` | `docker compose down` | Stop and remove containers |
+| `make logs` | `docker compose logs -f app` | Follow container logs |
+| `make ps` | `docker compose ps` | List running containers |
+| `make shell` | `docker exec -it orcasagent-gtm sh` | Shell into running container |
+| `make clean` | `docker compose down --rmi all --volumes` | Full cleanup |
+
+### Health Check
+The container includes a health check on `http://localhost:3000/`. Use `docker compose ps` to verify status.
+
+## Deployment Targets (decided — CP-005)
+- **Primary:** Docker container (local)
+- **Optional:** Vercel / Netlify / AWS Amplify (for cloud deployment later)
 
 ## CI/CD (pending)
 GitHub Actions for lint → test → build → deploy on push to `main`.

@@ -4,8 +4,28 @@
 |---------|------|-------|------|--------|
 | 0001 | 2026-10-28 | Setup | Create folder structure + context engineering files | Done |
 | 0002 | 2026-10-28 | System Setup | Git init, editor configs, code directory structure, dev setup guide | Done |
+| 0003 | 2026-10-28 | Container Hosting | Docker container local setup, tech stack decision (Next.js/Tailwind/Static MDX) | Done |
 
 ---
+
+## Session 0003 — 2026-10-28
+
+**Goal:** Containerized local hosting setup — Dockerfile, docker-compose, Makefile, env config, tech stack decision.
+
+**Completed:**
+- Tech stack decided (CP-005): Next.js + Static MDX + Tailwind CSS + Docker container (local), deploy via `docker compose up`
+- `Dockerfile` — multi-stage (deps → builder → runner), non-root user, health check
+- `docker-compose.yml` — container on port 3000, env_file support, optional nginx reverse proxy
+- `.dockerignore` — standard Node/Next.js excludes
+- `Makefile` — build, up, down, logs, ps, shell, clean, dev targets
+- `.env.example` — template for environment variables
+- `07_CODE/SETUP.md` — container local development quick start + Makefile target table
+
+**Blocked:** None
+
+**Next Session First Action:** Initialize Next.js app in `07_CODE/frontend/` (CP-009 MVP frontend build), or begin CP-006 database schema design.
+
+**Notes:** Git repo has 3 commits. Container config ready. Waiting on `package.json`/Next.js initialization before `docker compose build` will succeed.
 
 ## Session 0002 — 2026-10-28
 

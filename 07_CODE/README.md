@@ -8,7 +8,7 @@
 | Framework | TBD | CP-005 |
 | Styling | TBD | CP-005 |
 | CMS | TBD | CP-005 |
-| Hosting | TBD | CP-005 |
+| Hosting | Docker container (local) | CP-005 |
 
 ## Directory Layout
 
