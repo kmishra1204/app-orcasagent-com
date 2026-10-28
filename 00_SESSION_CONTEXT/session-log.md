@@ -7,8 +7,37 @@
 | 0003 | 2026-10-28 | Container Hosting | Docker container local setup, tech stack decision (Next.js/Tailwind/Static MDX) | Done |
 | 0004 | 2026-10-28 | GitHub Connection | gh auth device flow, repo created, all commits pushed to origin | Done |
 | 0005 | 2026-10-28 | GTM Research + Page Plan | agent-mesh-release cloned, GTM kit ingested, page plan + component inventory + data pipeline written | Done |
+| 0006 | 2026-10-28 | Hero Section Build | Next.js App Router initialized, hero section with Framer Motion built, static export verified | Done |
 
 ---
+
+## Session 0006 — 2026-10-28
+
+**Goal:** Build the hero section with motion — First code from GTM page plan.
+
+**Completed:**
+- Initialized Next.js App Router in `07_CODE/frontend/` (React 18, Next 15.1.0, Tailwind, Framer Motion)
+- `next.config.js` — static export (`output: 'export'`), unoptimized images
+- `tailwind.config.js` — brand tokens (ink, brass, teal, rose, paper, line) + animations (fade-up, fade-in, pulse-brass, float)
+- `app/globals.css` — CSS variables for brand colors, light/dark theme support
+- `app/layout.tsx` — root layout + metadata (title, description, Open Graph)
+- `app/page.tsx` — home page rendering HeroSection
+- `components/hero-section.tsx` — animated hero with:
+  - Staggered fade-up entrance (eyebrow → headline → subhead → CTAs → proof strip)
+  - Brass glow background pulses
+  - Hover scale + shadow on CTAs
+  - Teal pulse indicators on proof strip stats
+  - Responsive layout (stacked on mobile, side-by-side CTAs on desktop)
+- `data/site.json` — build-time data from release-manifest.json (23 kits, 1,200 agents, 94 vendor AI agents, grouped by owner)
+- `lib/site-data.ts` — typed constants for hero copy and proof strip
+- `npm run build` — **PASS** (static export to `out/`, 40.2 kB home page)
+- Next.js upgraded 15.0.0 → 15.1.0 (security patch CVE-2025-66478)
+
+**Blocked:** None
+
+**Next Session First Action:** Build Proof Strip + Platforms sections, or begin /legal/trademarks and /privacy pages.
+
+**Notes:** Git repo has 7 commits. Container config at root still works (`docker compose up`). Next.js dev server runs on localhost:3000.
 
 ## Session 0005 — 2026-10-28
 

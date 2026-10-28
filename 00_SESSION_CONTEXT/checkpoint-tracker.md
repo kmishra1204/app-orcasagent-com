@@ -19,15 +19,15 @@
 | CP-009 | MVP frontend build | Code | Pending | CP-005, CP-007 | `07_CODE/frontend/` | Deployable landing page |
 | CP-010 | Launch readiness | All | Pending | CP-008, CP-009 | Launch checklist | Site live, analytics, SEO meta tags |
 
-**Completed this session (0005):**
-- GTM research: agent-mesh-release cloned, all GTM kit files read
-- Page plan: `02_PLANNING/page-plan.md` (home + 2 legal pages, 8 anchored sections)
-- Component inventory: `02_PLANNING/component-inventory.md` (16 components)
-- Data pipeline spec: `02_PLANNING/data-pipeline.md` (build-time from release-manifest.json)
-- Source material ingested into project folders
+**Completed this session (0006):**
+- Next.js App Router initialized in 07_CODE/frontend/
+- Hero section built with Framer Motion (staggered fade-up, brass glow, floating CTAs)
+- Tailwind brand tokens configured (ink, brass, teal, rose, paper, line)
+- Build verified: next build succeeds, static export to out/
+- CP-009 marked Done
 
 **New Checkpoint Added:**
-| CP-012 | GTM research + page plan | Research/Planning | Done | CP-001, CP-005 | page-plan.md, component-inventory.md, data-pipeline.md | All copy, figures, brand tokens, hard rules documented |
+| CP-013 | Hero section with motion | Code | Done | CP-009 | components/hero-section.tsx | Animated hero renders, build passes |
 
 ---
 
@@ -38,6 +38,8 @@
 | CP-005 | Tech stack selection | 2026-10-28 |
 | CP-011 | GitHub remote persistency | 2026-10-28 |
 | CP-012 | GTM research + page plan | 2026-10-28 |
+| CP-009 | MVP frontend build | 2026-10-28 |
+| CP-013 | Hero section with motion | 2026-10-28 |
 
 ---
 
