@@ -19,6 +19,11 @@
 | CP-009 | MVP frontend build | Code | Pending | CP-005, CP-007 | `07_CODE/frontend/` | Deployable landing page |
 | CP-010 | Launch readiness | All | Pending | CP-008, CP-009 | Launch checklist | Site live, analytics, SEO meta tags |
 
+**Completed this session (0002):**
+- Git repo initialized (2 commits)
+- Editor/tooling configs: `.editorconfig`, `.prettierrc`, `.eslintrc.json`
+- Code scaffolding: `07_CODE/frontend/`, `07_CODE/backend/`, `07_CODE/shared/`
+
 ---
 
 ## Completed Checkpoints
